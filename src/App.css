@@ -2,6 +2,24 @@ body {
   background-color: whitesmoke;
 }
 
+.todo-form {
+  width: 70%;
+}
+.todo-form input {
+  height: 5vh;
+  width: 70%;
+  margin: auto;
+}
+.todo-form button {
+  height: 6vh;
+  width: 28%;
+  background-color: #5cb85c;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .todo-list {
   background-color: white;
   margin: auto;
@@ -45,3 +63,4 @@ input[type=checkbox] {
 input[type=checkbox]:focus {
   outline: 0;
 }
+

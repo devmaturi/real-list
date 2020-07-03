@@ -1,14 +1,37 @@
 import React from 'react'
 import TodoItem from './components/TodoItem'
-import todosData from './components/todosData'
+import shortid from "shortid";
+import Form from './components/todoForm'
 import './App.css'
 
 class App extends React.Component {
   state = {
-    todos: todosData
+    todos: [],
+    todoNote: ""
   }
+
+  handleInputChange = (e) => {
+    this.setState({
+       todoNote : e.target.value
+       })
+ }
 // testing testing testing
-  handleChange = (id) => {
+handleSubmit = (e) => {
+  e.preventDefault()
+  this.setState({
+    todos: [
+      {
+        id: shortid.generate(),
+        text: this.state.todoNote,
+        completed: false
+    },
+    ...this.state.todos,   
+    ],
+    todoNote: ""
+  })
+}
+
+  handleCheckChange = (id) => {
     this.setState(prevState => {
       const updatedTodos = prevState.todos.map(todo => {
         if(todo.id === id){
@@ -27,11 +50,18 @@ class App extends React.Component {
   }
 
   render(){
-    const todoItems = this.state.todos.map(eachItem => <TodoItem key={eachItem.id} 
-      eachItem={eachItem} handleChange={this.handleChange} /> )
+    const {todoNote} = this.state;
+    const todoItems = this.state.todos.map((eachItem) => <TodoItem key={eachItem.id} 
+      eachItem={eachItem} handleChange={this.handleCheckChange} /> )
+
     return (
       <div className="todo-list">
+        <Form todoNote={todoNote} 
+        handleInputChange={this.handleInputChange}
+        handleSubmit={this.handleSubmit}
+        />
         {todoItems}
+        
       </div>
     )
   }

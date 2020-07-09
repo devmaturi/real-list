@@ -37,6 +37,7 @@ const App = () => {
         setTodos(updatedTodos)
     }
 
+    // This handles the display of all the todo items the user adds
     const todoItems = todos.map(eachItem => <TodoItem key={eachItem.id} 
     eachItem={eachItem} handleChange={handleCheckChange} /> )
 

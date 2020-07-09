@@ -8,7 +8,7 @@ const Form = (props) => {
             onChange={props.handleInputChange} 
             value={props.todoNote}
             />
-            <button type="submit" name="submit" disabled={props.todoNote == "" ? true : false} >Add</button>
+            <button type="submit" name="submit" disabled={props.todoNote === "" ? true : false} >Add</button>
         </form>
     )
 

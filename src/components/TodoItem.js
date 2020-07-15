@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css'
 
-function TodoItem(props) {
+const TodoItem = (props) => {
   const completedStyle = {
     fontStyle: "italic",
     color: "grey",
@@ -17,6 +17,7 @@ function TodoItem(props) {
         <p style={props.eachItem.completed ? completedStyle : null}>{props.eachItem.text}</p>
     </div>
   );
+  
 }
 
 export default TodoItem;

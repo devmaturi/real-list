@@ -2,23 +2,27 @@ body {
   background-color: whitesmoke;
 }
 
+/* ================ Styles for todoform.js ================= */
+
 .todo-form {
   width: 70%;
 }
 .todo-form input {
   height: 5vh;
-  width: 70%;
+  width: 65%;
   margin: auto;
+  padding: 3px;
 }
-.todo-form button {
-  height: 6vh;
-  width: 28%;
-  background-color: #5cb85c;
-  color: #fff;
-  border: none;
-  outline: none;
-  cursor: pointer;
+@media(max-width:412px){
+  .todo-form input {
+    height:4vh;
+  }
 }
+
+/* ================== End styles for todoform.js =============== */
+
+
+/* ================== Styles for App.js =====================  */
 
 .todo-list {
   background-color: white;
@@ -42,6 +46,11 @@ body {
   padding: 30px;
 }
 
+/* =================== End styles for App.js =====================  */
+
+
+/* =================== Styles for todoitem.js ====================  */
+
 .todo-item {
   display: flex;
   justify-content: flex-start;
@@ -49,18 +58,22 @@ body {
   padding: 30px 20px 0;
   width: 70%;
   border-bottom: 1px solid #cecece;
-  font-family: Roboto, sans-serif;
+  /* font-family: Roboto, sans-serif; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 100;
-  font-size: 15px;
+  font-size: 18px;
   color: #333333;
+  background-color: floralwhite;
 }
 
 input[type=checkbox] {
   margin-right: 10px;
   font-size: 30px;
+
 }
 
 input[type=checkbox]:focus {
   outline: 0;
 }
 
+/* ================= End styles for todoitem.js ====================  */

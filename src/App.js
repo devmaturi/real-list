@@ -43,6 +43,7 @@ const App = () => {
 
     return (
       <div className="todo-list">
+        <h2>To Do List</h2>
         <Form todoNote={todoNote} 
               handleInputChange={handleInputChange}
               handleSubmit={handleSubmit}

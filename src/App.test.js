@@ -4,6 +4,12 @@ import App from './App';
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headingElement = getByText(/To Do List/i);
+  expect(headingElement).toBeInTheDocument();
+});
+
+describe('My Test Suite', () => {
+  it('My Test Case', () => {
+    expect(true).toEqual(true);
+  });
 });
